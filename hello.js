@@ -1,14 +1,12 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+// 환경변수에서 온 PORT 값을 받습니다
+const port = process.env.PORT;
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+app.get('/', (req, res, next) => {
+  res.send('Hello, Heroku!');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(port, () => {
+  console.log(`Server is listening on ${port}`);
 });
