@@ -1,16 +1,14 @@
-var http = require('http');
+const http = require('http');
 
-var server = http.createServer();
+const hostname = '127.0.0.1';
+const port = 3000;
 
-server.addListener('request', function (request, response) {
-    console.log('requested...');
-    response.writeHead(200, {'Content-Type' : 'text/plain'});
-    response.write('Hello nodejs');
-    response.end();
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
 });
 
-server.addListener('connection', function(socket){
-    console.log('connected...');
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
 });
-
-server.listen(8888);
