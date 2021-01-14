@@ -5,7 +5,7 @@
   "description": "",
   "main": "hello.js",
   "scripts": {
-    "start": "node hello"
+    "start": "node app"
   },
   "keywords": [],
   "author": "",
