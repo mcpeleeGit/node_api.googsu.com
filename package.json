@@ -1,6 +1,7 @@
 {
   "name": "googsu",
   "version": "1.0.1",
+  "private": true
   "description": "",
   "main": "hello.js",
   "scripts": {
