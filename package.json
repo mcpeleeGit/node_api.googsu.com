@@ -5,10 +5,8 @@
   "description": "",
   "main": "hello.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index",
-    "start": "node index"
-  }
+    "start": "node hello"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
